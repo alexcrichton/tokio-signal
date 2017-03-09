@@ -16,15 +16,27 @@ travis-ci = { repository = "alexcrichton/tokio-signal" }
 appveyor = { repository = "alexcrichton/tokio-signal" }
 
 [dependencies]
-tokio-core = "0.1.4"
-futures = "0.1.7"
+#tokio-core = "0.1.4"
+#futures = "0.1.7"
+mio = { git = "https://github.com/carllerche/mio" }
+tokio-io = { git = 'https://github.com/alexcrichton/tokio-io' }
+
+[dependencies.tokio-core]
+git = 'https://github.com/alexcrichton/tokio-core'
+default-features = false
+branch = 'tio'
+features = ["use_std"]
+
+[dependencies.futures]
+git = 'https://github.com/alexcrichton/futures-rs'
+default-features = false
+branch = 'close'
+features = ["use_std"]
 
 [target.'cfg(unix)'.dependencies]
 libc = "0.2"
-mio = "0.6"
-mio-uds = "0.6"
+mio-uds = { git = "https://github.com/alexcrichton/mio-uds", branch = "tio" }
 
 [target.'cfg(windows)'.dependencies]
 winapi = "0.2"
 kernel32-sys = "0.2"
-mio = "0.6"

@@ -1,0 +1,1 @@
+initSidebarItems({"constant":[["SIGALRM",""],["SIGHUP",""],["SIGINT",""],["SIGPIPE",""],["SIGQUIT",""],["SIGTERM",""],["SIGTRAP",""],["SIGUSR1",""],["SIGUSR2",""]],"struct":[["Signal","An implementation of `Stream` for receiving a particular type of signal."]]});

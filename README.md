@@ -1,3 +1,7 @@
+## The tokio-signal crate has been moved into the [tokio](https://github.com/tokio-rs/tokio) Git repository.
+
+Please do not use this repo anymore.
+
 # tokio-signal
 
 An implementation of Unix signal handling for Tokio
